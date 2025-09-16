@@ -1,12 +1,13 @@
 import React from "react";
-import IconCard from "./IconCard";
+
 import { MdOutlineConstruction } from "react-icons/md";
 import { TbBuildingSkyscraper } from "react-icons/tb";
 import { LuHandshake } from "react-icons/lu";
+import IconCard from "../cards/IconCard";
 
 const About = () => {
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full mt-10 lg:mt-20">
       <div className="2xl:container 2xl:mx-auto flex flex-col gap-4 px-6 lg:flex-row lg:justify-between w-full md:px-20">
         <div className="flex flex-col gap-4 justify-start items-start lg:w-1/2">
           <div className="bg-black text-white px-4 py-1 rounded-full">
@@ -64,7 +65,7 @@ const About = () => {
       </div>
 
       {/* higlights */}
-      <div className="grid  lg:grid-cols-3 gap-10 px-20 mt-10">
+      <div className="grid  lg:grid-cols-3 gap-10 px-20 mt-10 2xl:container 2xl:mx-auto">
         <IconCard
           icon={<MdOutlineConstruction className="text-8xl text-black/70" />}
           title="Trusted Experience"

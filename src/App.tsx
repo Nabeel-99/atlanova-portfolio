@@ -2,24 +2,32 @@ import "@fontsource/manrope/300.css";
 // import "@fontsource/manrope/500.css";
 // import "@fontsource/manrope/700.css";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Services from "./components/Services";
-import Work from "./components/Work";
+import Services from "./components/sections/Services";
+import Work from "./components/sections/Work";
+import Testimonials from "./components/sections/Testimonials";
+import Faqs from "./components/sections/Faqs";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   return (
     <>
-      <main className="w-full  h-full flex flex-col gap-20  ">
+      <main className="w-full  h-full flex flex-col">
         <Navbar />
         <Hero />
         <About />
         <Services />
         <Work />
+        <Testimonials />
+        <Faqs />
+        <Contact />
+        <Footer />
       </main>
     </>
   );
