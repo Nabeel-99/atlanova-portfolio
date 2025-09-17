@@ -3,7 +3,10 @@ import WorkCard from "../cards/WorkCard";
 
 const Work = () => {
   return (
-    <section className="w-full h-full px-6 p-6 lg:p-10 lg:px-20 mt-10 lg:mt-20">
+    <section
+      id="our-work"
+      className="w-full h-full px-6 p-6 lg:p-10 lg:px-20 mt-10 lg:mt-20"
+    >
       <div className="flex flex-col gap-10 items-center 2xl:container 2xl:mx-auto">
         <div className="flex flex-col gap-4 justify-center items-center ">
           <div className="bg-black text-white px-4 py-1 rounded-full">

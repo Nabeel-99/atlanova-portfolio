@@ -26,7 +26,7 @@ const Navbar = () => {
     }
   }, [isOpen]);
   return (
-    <nav className="2xl:container 2xl:mx-auto flex absolute z-20 top-0 left-0 right-0 items-center justify-between px-6 py-6 md:px-20 md:py-10">
+    <nav className="nav opacity-0 2xl:container 2xl:mx-auto flex absolute z-20 top-0 left-0 right-0 items-center justify-between px-6 py-6 md:px-20 md:py-10">
       <div className="z-50">
         <img
           src={"/logo.jpg"}
@@ -66,19 +66,29 @@ const Navbar = () => {
         <div className="nav-menu  md:hidden absolute inset-0 bg-black/50 h-screen backdrop-blur-md">
           <ul className="flex flex-col gap-4 text-white px-6 mt-24 text-lg">
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={() => setIsOpen(false)}>
+                About
+              </a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="#services" onClick={() => setIsOpen(false)}>
+                Services
+              </a>
             </li>
             <li>
-              <a href="#our-work">Our work</a>
+              <a href="#our-work" onClick={() => setIsOpen(false)}>
+                Our work
+              </a>
             </li>
             <li>
-              <a href="#faqs">FAQs</a>
+              <a href="#faqs" onClick={() => setIsOpen(false)}>
+                FAQs
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={() => setIsOpen(false)}>
+                Contact
+              </a>
             </li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ import TestimonialCard from "../cards/TestimonialCard";
 
 const Testimonials = () => {
   return (
-    <section className="w-full h-full mt-10 lg:mt-20">
+    <section id="testimonials" className="w-full h-full mt-10 lg:mt-20">
       <div className="flex flex-col gap-10 px-2 items-center">
         <div className="flex flex-col gap-4 justify-center items-center ">
           <div className="bg-black text-white px-4 py-1 rounded-full">

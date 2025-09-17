@@ -7,7 +7,7 @@ import IconCard from "../cards/IconCard";
 
 const About = () => {
   return (
-    <section className="w-full h-full mt-10 lg:mt-20">
+    <section id="about" className="w-full h-full mt-10 lg:mt-20">
       <div className="2xl:container 2xl:mx-auto flex flex-col gap-4 px-6 lg:flex-row lg:justify-between w-full md:px-20">
         <div className="flex flex-col gap-4 justify-start items-start lg:w-1/2">
           <div className="bg-black text-white px-4 py-1 rounded-full">
@@ -60,7 +60,7 @@ const About = () => {
         <img
           src="/pic2.jpg"
           alt="about1"
-          className="object-cover rounded-sm w-96 h-[450px]"
+          className="object-cover rounded-sm  h-[450px]"
         />
       </div>
 

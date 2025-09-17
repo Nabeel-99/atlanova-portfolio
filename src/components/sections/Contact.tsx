@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <section className="w-full h-full px-4 mt-10 lg:mt-20">
+    <section id="contact" className="w-full h-full px-4 mt-10 lg:mt-20">
       <div className="bg-black p-6 lg:p-10 lg:px-20 rounded-xl text-white ">
         <div className="flex flex-col 2xl:container 2xl:mx-auto lg:flex-row lg:justify-between gap-10 lg:gap-20 w-full">
           <div className="flex flex-col gap-4 lg:w-1/2">

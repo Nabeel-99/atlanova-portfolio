@@ -13,12 +13,14 @@ import Testimonials from "./components/sections/Testimonials";
 import Faqs from "./components/sections/Faqs";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/Footer";
+import LogoAnimation from "./components/LogoAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   return (
     <>
       <main className="w-full  h-full flex flex-col">
+        <LogoAnimation />
         <Navbar />
         <Hero />
         <About />

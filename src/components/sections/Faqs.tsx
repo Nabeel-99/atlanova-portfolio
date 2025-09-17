@@ -41,7 +41,7 @@ const Faqs = () => {
     },
   ];
   return (
-    <section className="w-full h-full px-6 lg:px-20 mt-10 lg:mt-30">
+    <section id="faqs" className="w-full h-full px-6 lg:px-20 mt-10 lg:mt-30">
       <div className="flex flex-col gap-10 lg:flex-row lg:gap-40 2xl:container 2xl:mx-auto">
         <div className="flex flex-col items-center lg:items-start gap-4">
           <div className="bg-black text-white px-4 py-1 rounded-full">

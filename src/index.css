@@ -7,6 +7,36 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+.font-pacifico {
+  font-family: "Pacifico", cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+.shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #b5b5b5a4;
+  display: inline-block;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -150,3 +180,17 @@ body {
     animation: accordion-up 0.2s ease-out;
   }
 }
+
+/* .glare {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #ff0080,
+    #7928ca,
+    #2af598,
+    #009efd,
+    #ff0080
+  );
+  opacity: 0;
+  filter: blur(60px);
+  transition: opacity 0.5s ease;
+} */
