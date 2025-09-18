@@ -1,15 +1,69 @@
-import React from "react";
-
 import { MdOutlineConstruction } from "react-icons/md";
 import { TbBuildingSkyscraper } from "react-icons/tb";
 import { LuHandshake } from "react-icons/lu";
 import IconCard from "../cards/IconCard";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import MobileSwiper from "../MobileSwiper";
+import MarqueeEffect from "../MarqueeEffect";
 
 const About = () => {
+  const images = [
+    "/pic7.jpg",
+    "/pic2.jpg",
+    "/pic8.jpg",
+    "/pic6.jpg",
+    "/pic10.jpg",
+    "/pic4.jpg",
+    "/pic9.jpg",
+    "/pic5.jpg",
+    "/pic3.jpg",
+  ];
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 60%",
+      },
+    });
+
+    tl.from(".about-text", {
+      y: 10,
+      duration: 1,
+      ease: "power2.inOut",
+      opacity: 0,
+    }).from(
+      ".about-div",
+      {
+        y: 10,
+        duration: 1,
+        ease: "power2.inOut",
+        opacity: 0,
+      },
+      "<"
+    );
+
+    const highlights = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".highlights",
+        start: "top 60%",
+      },
+    });
+    highlights.from(".highlights .icon-card", {
+      stagger: 0.2,
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.inOut",
+    });
+  });
+
   return (
-    <section id="about" className="w-full h-full mt-10 lg:mt-20">
+    <section id="about" className="w-full h-full mt-10 pt-10 lg:mt-20">
       <div className="2xl:container 2xl:mx-auto flex flex-col gap-4 px-6 lg:flex-row lg:justify-between w-full md:px-20">
-        <div className="flex flex-col gap-4 justify-start items-start lg:w-1/2">
+        <div className="about-div flex flex-col gap-4 justify-start items-start lg:w-1/2">
           <div className="bg-black text-white px-4 py-1 rounded-full">
             <p>About us</p>
           </div>
@@ -17,7 +71,7 @@ const About = () => {
             Built for <br /> Business
           </h2>
         </div>
-        <p className="text-lg lg:text-xl leading-relaxed lg:leading-[2] lg:w-3/4">
+        <p className="about-text text-lg lg:text-xl leading-relaxed lg:leading-[2] lg:w-3/4">
           We are a company that works in construction, engineering,
           infrastructure, import/export, and general trading. Our goal is to
           provide reliable and efficient services while building trust with our
@@ -28,44 +82,42 @@ const About = () => {
         </p>
       </div>
       {/* large screen */}
-      <div className="hidden md:flex items-center overflow-x-hidden gap-6 mt-10">
-        <img
-          src="/pic2.jpg"
-          alt="about1"
-          className="object-cover rounded-sm w-96 h-[450px]"
-        />
-        <img
-          src="/pic3.jpg"
-          alt="about2"
-          className="object-cover rounded-sm w-96 h-[450px]"
-        />
-        <img
-          src="/pic4.jpg"
-          alt="about3"
-          className="object-cover rounded-sm w-96 h-[450px]"
-        />
-        <img
-          src="/pic5.jpg"
-          alt="about4"
-          className="object-cover rounded-sm w-96 h-[450px]"
-        />
-        <img
-          src="/pic6.jpg"
-          alt="about5"
-          className="object-cover rounded-sm w-96 h-[450px]"
-        />
-      </div>
-      {/* mobile carousel */}
-      <div className="flex md:hidden items-center overflow-x-hidden px-6 gap-6 mt-10">
-        <img
-          src="/pic2.jpg"
-          alt="about1"
-          className="object-cover rounded-sm  h-[450px]"
-        />
-      </div>
+      <MarqueeEffect>
+        <div className="flex marquee-effect-left w-max">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`about${index + 1}`}
+              className="object-cover rounded-sm w-96 h-[450px] mr-6"
+            />
+          ))}
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`about${index + 1}`}
+              className="object-cover rounded-sm w-96 h-[450px] mr-6"
+            />
+          ))}
+        </div>
+      </MarqueeEffect>
+
+      {/* mobile swiper */}
+      <MobileSwiper>
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={image}
+              alt={`about${index + 1}`}
+              className="object-cover rounded-sm h-[450px] w-full"
+            />
+          </SwiperSlide>
+        ))}
+      </MobileSwiper>
 
       {/* higlights */}
-      <div className="grid  lg:grid-cols-3 gap-10 px-20 mt-10 2xl:container 2xl:mx-auto">
+      <div className="grid  highlights lg:grid-cols-3 gap-10 px-20 mt-10 2xl:container 2xl:mx-auto">
         <IconCard
           icon={<MdOutlineConstruction className="text-8xl text-black/70" />}
           title="Trusted Experience"

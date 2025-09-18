@@ -13,6 +13,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.swiper-pagination-bullet {
+  background: #666 !important;
+  opacity: 0.5;
+  width: 12px !important;
+  height: 12px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: black !important;
+  opacity: 1;
+  transform: scale(1.2);
+}
 .shiny-text {
   background: linear-gradient(
     120deg,

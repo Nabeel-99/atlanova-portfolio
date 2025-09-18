@@ -34,9 +34,11 @@ const Navbar = () => {
           className="w-10 h-10  md:w-12 md:h-12 border border-[#d4a017] rounded-full"
         />
       </div>
-      <ul className="hidden md:flex z-10 text-lg items-center text-white gap-10">
+      <ul className="hidden md:flex z-10 text-xl items-center font-bold text-white gap-10">
         <li>
-          <a href="#about">About</a>
+          <a href="#about" className="">
+            About
+          </a>
         </li>
         <li>
           <a href="#services">Services</a>

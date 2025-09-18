@@ -1,5 +1,3 @@
-import React from "react";
-
 type IconCardProps = {
   icon: any;
   title: string;
@@ -7,7 +5,7 @@ type IconCardProps = {
 };
 const IconCard = ({ icon, title, description }: IconCardProps) => {
   return (
-    <div className="flex lg:p-6 flex-col gap-4 items-center justify-center">
+    <div className="flex icon-card lg:p-6 flex-col gap-4 items-center justify-center">
       <div>{icon}</div>
       <div className="flex flex-col gap-2 items-center justify-center">
         <h3 className="text-2xl font-bold">{title}</h3>

@@ -1,5 +1,3 @@
-import React from "react";
-
 type WorkCardProps = {
   image: string;
   title: string;
@@ -29,7 +27,7 @@ const WorkCard = ({
           <img
             src={image}
             alt={alt}
-            className=" w-full h-[500px] lg:w-[1200px] rounded-xl object-fill lg:object-cover"
+            className=" w-full h-[300px]  md:h-[500px] lg:w-[1200px] rounded-xl object-cover"
           />
         </div>
         <div className="flex flex-col gap-6">

@@ -1,14 +1,29 @@
-import React from "react";
 import ServiceCard from "../cards/ServiceCard";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Services = () => {
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#services",
+        start: "top 60%",
+      },
+    });
+    tl.from(".service-text", {
+      y: 20,
+      duration: 1,
+      ease: "power2.inOut",
+      opacity: 0,
+    });
+  }, []);
   return (
     <section
       id="services"
-      className="w-full h-full  px-6 p-6 lg:p-10 lg:px-20 bg-[#f4f3f3] mt-10 lg:mt-20"
+      className="w-full h-full overflow-hidden  px-6 p-6 lg:p-10 lg:px-20 bg-[#f4f3f3] mt-10 lg:mt-20"
     >
       <div className="flex flex-col gap-10 items-center 2xl:container 2xl:mx-auto">
-        <div className="flex flex-col gap-4 justify-center items-center ">
+        <div className="service-text flex flex-col gap-4 justify-center items-center ">
           <div className="bg-black text-white px-4 py-1 rounded-full">
             <p>Services</p>
           </div>
@@ -20,10 +35,10 @@ const Services = () => {
         </div>
         <div className="flex flex-col gap-20">
           <ServiceCard
-            title="Construction & Engineering"
-            description="We handle civil and structural engineering, road and building projects, and project management with precision and care."
-            image="/construction.jpg"
-            alt="construction"
+            title="Furniture Imports & Trade"
+            description="We connect businesses with trusted global manufacturers, handling sourcing, negotiations, and logistics to deliver premium furniture and equipment at the best value."
+            image="/furniture.jpg"
+            alt="business"
           />
           <ServiceCard
             title="Real Estate & Land Development"
@@ -33,10 +48,10 @@ const Services = () => {
             order="reverse"
           />
           <ServiceCard
-            title="Global Sourcing & Trade"
-            description="We help businesses source quality products, furniture, and equipment from international markets and bring them home at competitive value."
-            image="/furniture.jpg"
-            alt="business"
+            title="Construction & Engineering"
+            description="We handle civil and structural engineering, road and building projects, and project management with precision and care."
+            image="/construction.jpg"
+            alt="construction"
           />
         </div>
       </div>

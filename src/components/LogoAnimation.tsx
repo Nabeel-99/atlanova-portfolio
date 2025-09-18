@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const LogoAnimation = () => {
   const [isAnimating, setIsAnimating] = useState(true);
@@ -10,7 +10,11 @@ const LogoAnimation = () => {
     if (!isAnimating) return;
 
     const welcome = new SplitText(".welcome", { type: "chars" });
+
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+    document.body.style.height = "100%";
 
     const tl = gsap.timeline();
 
@@ -61,16 +65,13 @@ const LogoAnimation = () => {
         }
         // "<"
       )
-      .from(
-        ".btn-continue",
-        {
-          opacity: 0,
-          y: 10,
-          duration: 0.5,
-          ease: "power2.inOut",
-        },
-        "-=0.5"
-      );
+      .from(".btn-continue", {
+        opacity: 0,
+        y: 10,
+        duration: 0.5,
+        ease: "power2.inOut",
+        pointerEvents: "none",
+      });
   }, [isAnimating]);
 
   useEffect(() => {
@@ -84,7 +85,10 @@ const LogoAnimation = () => {
         ease: "power2.inOut",
         onComplete: () => {
           setIsAnimating(false);
-          document.body.style.overflow = "auto";
+          document.body.style.overflow = "";
+          document.body.style.position = "";
+          document.body.style.width = "";
+          document.body.style.height = "";
         },
       })
         .to(
@@ -149,15 +153,15 @@ const LogoAnimation = () => {
       {isAnimating && (
         <div className="logo-page fixed z-50 bg-[#070606] h-screen w-full inset-0">
           <div className="flex flex-col items-center justify-center h-full w-full">
-            <div className="  flex flex-col gap-10 items-center justify-center">
-              <h2 className="font-pacifico lg:text-8xl  text-white welcome">
+            <div className="  flex flex-col lg:gap-10 items-center justify-center">
+              <h2 className="font-pacifico text-5xl lg:text-8xl  text-white welcome">
                 Welcome to
               </h2>
               <div className="flex flex-col relative  items-center justify-center gap-2">
                 <img
                   src="/A_only.png"
                   alt="logo"
-                  className="logo lg:w-1/2 z-20  lg:h-full  object-cover"
+                  className="logo w-full h-1/2 lg:w-1/2 z-20  lg:h-full  object-cover"
                 />
                 <div className="relative inline-block">
                   <h1 className="text-white logo-text  z-50 relative font-sans text-5xl font-bold tracking-wider">
@@ -166,10 +170,10 @@ const LogoAnimation = () => {
                 </div>
                 <div className="glare bg-gradient-to-tr   from-[#122a3f] via-[#351b40] rounded-full blur-[70px] h-full to-[#e91e63] absolute bottom-0 inset-0 z-0"></div>
               </div>
-              <div className="hover:bg-[#121212] transition-all duration-300 ease-in-out cursor-pointer mt-10 rounded-4xl">
+              <div className="hover:bg-[#121212] btn-continue  cursor-pointer mt-10 rounded-4xl">
                 <button
                   onClick={() => setIsOffset(true)}
-                  className="shiny-text border  btn-continue  h-full w-full border-[#181818] hover:bg-white rounded-4xl cursor-pointer hover:text-white text-3xl font-extrabold  p-6 "
+                  className="shiny-text border    h-full w-full border-[#181818] rounded-4xl cursor-pointer hover:text-white text-3xl font-extrabold  p-6 "
                 >
                   Continue
                 </button>
