@@ -35,9 +35,13 @@ const Hero = () => {
         <div className="flex flex-col px-2 pt-8 lg:px-0 lg:pt-0  w-full absolute left-0 right-0 lg:relative z-0  md:justify-end md:items-end h-full gap-4">
           <div className=" inset-0 absolute bg-black/60 lg:bg-black/35  h-full w-full"></div>
           <img
-            src={"/hero.jpg"}
-            alt="logo"
-            className="object-cover   rounded-xl border border-[#141313]  md:rounded-xl   w-full h-full  lg:h-[700px]  md:max-h-[700px] lg:w-[600px]"
+            src={"/hero.webp"}
+            alt="Construction and real estate development"
+            fetchPriority="high"
+            loading="eager"
+            width="600"
+            height="700"
+            className="object-cover rounded-xl border border-[#141313] md:rounded-xl w-full h-full lg:h-[700px] md:max-h-[700px] lg:w-[600px]"
           />
         </div>
       </div>

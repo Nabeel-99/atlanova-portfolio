@@ -157,10 +157,12 @@ const LogoAnimation = () => {
               <h2 className="font-pacifico text-5xl lg:text-8xl  text-white welcome">
                 Welcome to
               </h2>
-              <div className="flex flex-col relative  items-center justify-center gap-2">
+              <div className="flex flex-col  relative  items-center justify-center gap-2">
                 <img
                   src="/A_only.png"
                   alt="logo"
+                  fetchPriority="high"
+                  loading="eager"
                   className="logo w-full h-1/2 lg:w-1/2 z-20  lg:h-full  object-cover"
                 />
                 <div className="relative inline-block">

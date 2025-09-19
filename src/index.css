@@ -3,12 +3,26 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Manrope", sans-serif;
+  font-display: swap;
+}
+
 body {
   font-family: "Manrope", sans-serif;
 }
 
 .font-pacifico {
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico", "Brush Script MT", "Lucida Handwriting", cursive;
+}
+
+/* Safari blur fix for glare effect */
+.glare {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 html {
   scroll-behavior: smooth;
