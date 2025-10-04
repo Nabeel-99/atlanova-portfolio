@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="flex z-10 flex-col gap-4 mt-40 lg:mt-0  w-full ">
           <div className="flex items-center gap-4 justify-start">
             <div className="rounded-text flex items-center gap-4  px-4 rounded-full bg-[#302e2e]">
-              <div className="w-2 h-2 rounded-full bg-white"></div>
+              <div className="w-2 h-2 rounded-full animate-pulse bg-white"></div>
               <p>Available for work</p>
             </div>
           </div>

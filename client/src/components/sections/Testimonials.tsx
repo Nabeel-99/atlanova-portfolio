@@ -51,7 +51,7 @@ const Testimonials = () => {
         </div>
       </div>
       {/* large screen */}
-      <div className="hidden md:flex flex-col items-center  overflow-x-hidden mt-20 mask-x-from-70%">
+      <div className="hidden 2xl:container 2xl:mx-auto md:flex flex-col items-center  overflow-x-hidden mt-20 mask-x-from-70%">
         <MarqueeEffect>
           <div className="flex marquee-effect-left  w-max">
             {testimonials.map((testimonial, index) => (

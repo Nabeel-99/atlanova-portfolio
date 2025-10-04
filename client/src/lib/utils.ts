@@ -17,7 +17,7 @@ export const workData = [
     quote:
       "The process was seamless — from sourcing to delivery. The cost savings and quality were unmatched.",
     author: "Corporate Client",
-    className: "bg-[#ECF2E9]",
+    className: "bg-blue-800 text-white",
   },
   {
     image: "/workestate.jpg",
