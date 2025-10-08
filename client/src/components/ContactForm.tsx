@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { toast } from "sonner";
 import axios from "axios";
 import { FaSpinner } from "react-icons/fa";
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:8000"
+    : "https://atlanova-portfolio-qw3x.vercel.app";
 const ContactForm = () => {
   const [data, setData] = useState({
     fullname: "",

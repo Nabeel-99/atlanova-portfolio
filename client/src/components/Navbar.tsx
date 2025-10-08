@@ -34,7 +34,7 @@ const Navbar = () => {
           className="w-10 h-10  md:w-12 md:h-12 border border-[#d4a017] rounded-full"
         />
       </div>
-      <ul className="hidden md:flex z-10 text-xl items-center font-bold text-white gap-10">
+      <ul className="hidden md:flex z-10 text-xl items-center font-bold text-white gap-10 xl:gap-20">
         <li>
           <a href="#about" className="">
             About
@@ -43,9 +43,9 @@ const Navbar = () => {
         <li>
           <a href="#services">Services</a>
         </li>
-        <li>
+        {/* <li>
           <a href="#our-work">Our work</a>
-        </li>
+        </li> */}
         <li>
           <a href="#faqs">FAQs</a>
         </li>
@@ -77,11 +77,11 @@ const Navbar = () => {
                 Services
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#our-work" onClick={() => setIsOpen(false)}>
                 Our work
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#faqs" onClick={() => setIsOpen(false)}>
                 FAQs

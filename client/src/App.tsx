@@ -7,14 +7,13 @@ import About from "./components/sections/About";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Services from "./components/sections/Services";
-import Work from "./components/sections/Work";
 import Faqs from "./components/sections/Faqs";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/Footer";
-// import LogoAnimation from "./components/LogoAnimation";
 import ReactLenis, { type LenisRef } from "lenis/react";
 import { useEffect, useRef } from "react";
 import { Toaster } from "sonner";
+// import LogoAnimation from "./components/LogoAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
