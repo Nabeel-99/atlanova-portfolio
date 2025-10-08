@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import ReactLenis, { type LenisRef } from "lenis/react";
 import { useEffect, useRef } from "react";
 import { Toaster } from "sonner";
-// import LogoAnimation from "./components/LogoAnimation";
+import LogoAnimation from "./components/LogoAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -43,7 +43,7 @@ function App() {
       >
         <main className="w-full  h-full flex flex-col">
           <Toaster />
-          {/* <LogoAnimation /> */}
+          <LogoAnimation />
           <Navbar />
           <Hero />
           <About />
