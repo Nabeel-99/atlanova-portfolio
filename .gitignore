@@ -25,3 +25,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables
+.env
+.env.*
+!.env.example
+client/.env
+client/.env.*
+!client/.env.example
+server/.env
+server/.env.*
+!server/.env.example
+
+# Build outputs
+build
+out
+coverage
+
+# Caches and artifacts
+*.tsbuildinfo
+.eslintcache

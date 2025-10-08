@@ -1,4 +1,3 @@
-import { MdOutlineConstruction } from "react-icons/md";
 import { TbBuildingSkyscraper } from "react-icons/tb";
 import { LuHandshake } from "react-icons/lu";
 import IconCard from "../cards/IconCard";
@@ -8,6 +7,7 @@ import { SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import MobileSwiper from "../MobileSwiper";
 import MarqueeEffect from "../MarqueeEffect";
+import { MdOutlineWavingHand } from "react-icons/md";
 
 const About = () => {
   const images = [
@@ -117,11 +117,11 @@ const About = () => {
       </MobileSwiper>
 
       {/* higlights */}
-      <div className="grid  highlights lg:grid-cols-3 gap-10 px-20 mt-10 2xl:container 2xl:mx-auto">
+      <div className="grid   highlights lg:grid-cols-3  gap-10 px-20 mt-10 2xl:container 2xl:mx-auto">
         <IconCard
-          icon={<MdOutlineConstruction className="text-8xl text-black/70" />}
-          title="Trusted Experience"
-          description="Over 3 years delivering projects in construction, real estate, and trade."
+          icon={<MdOutlineWavingHand className="text-8xl text-black/70" />}
+          title="Client‑First Approach"
+          description="Clear communication, tailored solutions, and support at every step."
         />
         <IconCard
           icon={<TbBuildingSkyscraper className="text-8xl text-black/70" />}

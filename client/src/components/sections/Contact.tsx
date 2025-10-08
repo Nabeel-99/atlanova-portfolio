@@ -1,5 +1,3 @@
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import ContactForm from "../ContactForm";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -96,20 +94,22 @@ const Contact = () => {
               </div>
               <div className="flex contact-info  flex-col gap-1 lg:flex-row lg:justify-between">
                 <p className="text-white/80">Email</p>
-                <p>altanova@gmail.com</p>
+                <a href="mailto:altanovagloballtd@gmail.com">
+                  altanovagloballtd@gmail.com
+                </a>
               </div>
-              <div className="flex contact-info  flex-col gap-1 lg:flex-row lg:justify-between">
+              {/* <div className="flex contact-info  flex-col gap-1 lg:flex-row lg:justify-between">
                 <p className="text-white/80">Phone</p>
                 <p>+234 812 345 6789</p>
-              </div>
+              </div> */}
             </div>
-            <div className="flex contact-follow flex-col gap-2">
+            {/* <div className="flex contact-follow flex-col gap-2">
               <p>Follow us</p>
               <div className="flex items-center gap-3">
                 <FaInstagram className="text-xl" />
                 <FaXTwitter className="text-xl" />
               </div>
-            </div>
+            </div> */}
           </div>
           <ContactForm />
         </div>

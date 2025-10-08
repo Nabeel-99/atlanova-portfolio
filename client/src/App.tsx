@@ -8,13 +8,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Services from "./components/sections/Services";
 import Work from "./components/sections/Work";
-import Testimonials from "./components/sections/Testimonials";
 import Faqs from "./components/sections/Faqs";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/Footer";
-import LogoAnimation from "./components/LogoAnimation";
+// import LogoAnimation from "./components/LogoAnimation";
 import ReactLenis, { type LenisRef } from "lenis/react";
 import { useEffect, useRef } from "react";
+import { Toaster } from "sonner";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -43,13 +43,14 @@ function App() {
         ref={lenisRef}
       >
         <main className="w-full  h-full flex flex-col">
-          <LogoAnimation />
+          <Toaster />
+          {/* <LogoAnimation /> */}
           <Navbar />
           <Hero />
           <About />
           <Services />
-          <Work />
-          <Testimonials />
+          {/* <Work /> */}
+          {/* <Testimonials /> */}
           <Faqs />
           <Contact />
           <Footer />

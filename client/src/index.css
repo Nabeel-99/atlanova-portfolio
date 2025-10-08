@@ -12,6 +12,13 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 .font-pacifico {
   font-family: "Pacifico", "Brush Script MT", "Lucida Handwriting", cursive;
 }
