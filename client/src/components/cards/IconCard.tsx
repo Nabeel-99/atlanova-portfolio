@@ -8,7 +8,7 @@ const IconCard = ({ icon, title, description }: IconCardProps) => {
     <div className="flex icon-card lg:p-6 flex-col gap-4 items-center justify-center">
       <div>{icon}</div>
       <div className="flex flex-col gap-2 items-center justify-center">
-        <h3 className="text-2xl font-bold">{title}</h3>
+        <h3 className="text-2xl text-center font-bold">{title}</h3>
         <p className="text-center">{description}</p>
       </div>
     </div>
