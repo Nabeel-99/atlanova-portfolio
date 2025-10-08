@@ -29,7 +29,7 @@ const ContactForm = () => {
         phone: data.phone,
         message: data.message,
       });
-      console.log("res", res.data);
+
       if (res.status === 200) {
         toast.success("Email sent successfully");
         setData({
@@ -38,11 +38,12 @@ const ContactForm = () => {
           phone: "",
           message: "",
         });
-        setLoading(false);
       }
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
+      setLoading(false);
+    } finally {
       setLoading(false);
     }
   };
