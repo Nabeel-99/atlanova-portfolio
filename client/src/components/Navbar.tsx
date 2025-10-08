@@ -28,11 +28,13 @@ const Navbar = () => {
   return (
     <nav className="nav opacity-0 2xl:container 2xl:mx-auto flex absolute z-20 top-0 left-0 right-0 items-center justify-between px-6 py-6 md:px-20 md:py-10">
       <div className="z-50">
-        <img
-          src={"/logo.jpg"}
-          alt="logo"
-          className="w-10 h-10  md:w-12 md:h-12 border border-[#d4a017] rounded-full"
-        />
+        <a href="/">
+          <img
+            src={"/logo.jpg"}
+            alt="logo"
+            className="w-10 h-10  md:w-12 md:h-12 border border-[#d4a017] rounded-full"
+          />
+        </a>
       </div>
       <ul className="hidden md:flex z-10 text-xl items-center font-bold text-white gap-10 xl:gap-20">
         <li>
