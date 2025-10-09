@@ -26,7 +26,10 @@ const Navbar = () => {
     }
   }, [isOpen]);
   return (
-    <nav className="nav opacity-0 2xl:container 2xl:mx-auto flex absolute z-20 top-0 left-0 right-0 items-center justify-between px-6 py-6 md:px-20 md:py-10">
+    <nav
+      data-lenis-prevent
+      className="nav opacity-0 2xl:container 2xl:mx-auto flex absolute z-20 top-0 left-0 right-0 items-center justify-between px-6 py-6 md:px-20 md:py-10"
+    >
       <div className="z-50">
         <a href="/">
           <img
