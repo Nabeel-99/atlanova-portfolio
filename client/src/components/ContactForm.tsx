@@ -104,7 +104,6 @@ const ContactForm = () => {
           value={data.message}
           onChange={(e) => setData({ ...data, message: e.target.value })}
           className="border rounded-md px-4 py-1 min-h-44 max-h-44 overflow-scroll hide-scrollbar bg-black/2 [overscroll-behavior:contain]"
-          data-lenis-prevent
           onWheel={handleWheel}
         />
       </div>
