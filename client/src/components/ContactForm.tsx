@@ -14,7 +14,18 @@ const ContactForm = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const handleWheel = (e: React.WheelEvent<HTMLTextAreaElement>) => {
+    const target = e.currentTarget;
+    const isScrollable = target.scrollHeight > target.clientHeight;
+    const isAtTop = target.scrollTop === 0 && e.deltaY < 0;
+    const isAtBottom =
+      target.scrollTop + target.clientHeight >= target.scrollHeight &&
+      e.deltaY > 0;
 
+    if (isScrollable && !isAtTop && !isAtBottom) {
+      e.stopPropagation();
+    }
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!data.fullname || !data.email || !data.phone || !data.message) {
@@ -94,6 +105,7 @@ const ContactForm = () => {
           onChange={(e) => setData({ ...data, message: e.target.value })}
           className="border rounded-md px-4 py-1 min-h-44 max-h-44 overflow-scroll hide-scrollbar bg-black/2 [overscroll-behavior:contain]"
           data-lenis-prevent
+          onWheel={handleWheel}
         />
       </div>
       <button
