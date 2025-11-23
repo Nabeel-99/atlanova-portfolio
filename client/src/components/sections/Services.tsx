@@ -53,6 +53,13 @@ const Services = () => {
             image="/construction.jpg"
             alt="construction"
           />
+          <ServiceCard
+            title="Renewable Energy "
+            description="We provide clean and reliable solar energy systems, including panels, inverters, and battery installations for homes, businesses, and estates—helping reduce costs while ensuring uninterrupted power."
+            image="/solarinstaller.jpg"
+            alt="solar"
+            order="reverse"
+          />
         </div>
       </div>
     </section>

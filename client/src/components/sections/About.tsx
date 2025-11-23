@@ -13,6 +13,7 @@ const About = () => {
   const images = [
     "/pic7.jpg",
     "/pic2.jpg",
+    "/solar.jpg",
     "/pic8.jpg",
     "/pic6.jpg",
     "/pic10.jpg",
@@ -73,12 +74,12 @@ const About = () => {
         </div>
         <p className="about-text text-lg lg:text-xl leading-relaxed lg:leading-[2] lg:w-3/4">
           We are a company that works in construction, engineering,
-          infrastructure, import/export, and general trading. Our goal is to
-          provide reliable and efficient services while building trust with our
-          clients. We aim to deliver quality projects and trading solutions with
-          honesty, innovation, and care. By combining our skills in building and
-          global trade, we work to create lasting value for our partners and
-          communities.
+          infrastructure, renewable energy, import/export, and general trading.
+          Our mission is to provide reliable and efficient services while
+          building trust with our clients. Whether developing real estate,
+          delivering high-quality construction, or installing modern solar
+          solutions, we aim to create lasting value for communities and
+          partners.
         </p>
       </div>
       {/* large screen */}
