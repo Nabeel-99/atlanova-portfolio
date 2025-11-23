@@ -84,9 +84,10 @@ const Contact = () => {
             <p className="text-white/80 contact-desc">
               <p className="text-white/80 contact-desc">
                 For any inquiries about construction, real estate, land
-                development, or trading, our team is ready to assist you.
-                Whether you need a quote, professional advice, or details about
-                our services, we’re here to guide you every step of the way.
+                development, or renewable energy, our team is ready to assist
+                you. Whether you need a quote, professional advice, or details
+                about our services, we’re here to guide you every step of the
+                way.
               </p>
             </p>
             <div className="flex flex-col gap-3 border-b border-white/20 pb-5 contact-info">

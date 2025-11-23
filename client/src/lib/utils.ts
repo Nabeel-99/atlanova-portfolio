@@ -79,7 +79,7 @@ export const questions = [
   {
     question: "What services do you offer?",
     answer:
-      "We provide construction, civil engineering, real estate development, renewable energy solutions, project management, and import/export of goods including furniture, electronics, and building materials.",
+      "We provide construction, civil engineering, real estate development, renewable energy solutions, project management, furniture, electronics, and building materials.",
   },
   {
     question: "Do you handle both small and large projects?",
@@ -96,11 +96,11 @@ export const questions = [
     answer:
       "Yes. We provide solar installations, inverters, and complete renewable energy systems for homes, businesses, and estates.",
   },
-  {
-    question: "How do your import/export services work?",
-    answer:
-      "We source high-quality products from trusted partners worldwide, including furniture and equipment, and handle logistics to deliver on time.",
-  },
+  // {
+  //   question: "How do your import/export services work?",
+  //   answer:
+  //     "We source high-quality products from trusted partners worldwide, including furniture and equipment, and handle logistics to deliver on time.",
+  // },
   {
     question: "How can I get a quote for my project?",
     answer:

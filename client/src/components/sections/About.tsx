@@ -74,12 +74,11 @@ const About = () => {
         </div>
         <p className="about-text text-lg lg:text-xl leading-relaxed lg:leading-[2] lg:w-3/4">
           We are a company that works in construction, engineering,
-          infrastructure, renewable energy, import/export, and general trading.
-          Our mission is to provide reliable and efficient services while
-          building trust with our clients. Whether developing real estate,
-          delivering high-quality construction, or installing modern solar
-          solutions, we aim to create lasting value for communities and
-          partners.
+          infrastructure, renewable energy, furnitures, and general trading. Our
+          mission is to provide reliable and efficient services while building
+          trust with our clients. Whether developing real estate, delivering
+          high-quality construction, or installing modern solar solutions, we
+          aim to create lasting value for communities and partners.
         </p>
       </div>
       {/* large screen */}

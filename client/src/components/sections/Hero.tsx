@@ -12,15 +12,14 @@ const Hero = () => {
             </div>
           </div>
           <h1 className="title text-4xl lg:text-6xl leading-tight font-bold">
-            Real Estate <br className="" /> Furniture Imports
-            <br className="" /> Reliable Construction <br />
+            Reliable Construction <br /> Renewable Energy <br className="" />
+            Furnitures
             {/* Renewable Energy Solutions */}
           </h1>
           <p className="description text-lg max-w-xl  lg:pr-20 xl:pr-0 text-left">
-            We specialize in furniture imports, real estate development,
-            construction, and renewable energy solutions — delivering quality,
-            value, and trust across every project. Your vision, built with
-            excellence.
+            We specialize in real estate development, construction, renewable
+            energy solutions and furnitures — delivering quality, value, and
+            trust across every project. Your vision, built with excellence.
           </p>
           <ButtonLink
             bgColor="bg-[#302e2e]"

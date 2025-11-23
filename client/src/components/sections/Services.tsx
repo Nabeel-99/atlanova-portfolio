@@ -35,7 +35,7 @@ const Services = () => {
         </div>
         <div className="flex flex-col gap-20">
           <ServiceCard
-            title="Furniture Imports & Trade"
+            title="Furniture Trade"
             description="We connect businesses with trusted global manufacturers, handling sourcing, negotiations, and logistics to deliver premium furniture and equipment at the best value."
             image="/furniture.jpg"
             alt="business"
