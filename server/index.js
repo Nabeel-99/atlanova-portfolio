@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL, "https://localhost:5173"],
+    origin: [process.env.CLIENT_URL, "http://localhost:5173"],
   })
 );
 
@@ -36,6 +36,20 @@ app.post("/api/send-email", async (req, res) => {
       ${email}<br/>
       ${phone}
             `,
+    });
+
+    await resend.emails.send({
+      from: `noreply@altanovagloballtd.com`,
+      to: email,
+      subject: "Thank you for contacting Altanova Global Ltd",
+      html: `
+        <p>Dear ${fullname},</p>
+        <p>We’ve received your inquiry and will get back to you within 24 hours.</p>
+        <p>Thank you for reaching out to Altanova Global Ltd.</p>
+        <p>Best regards,<br/>
+        Altanova Global Ltd Team</p>
+
+      `,
     });
 
     return res.status(200).json({ message: "Email sent successfully" });
